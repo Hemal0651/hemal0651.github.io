@@ -2094,3 +2094,42 @@ footer {
     align-self: center;
   }
 }
+/* ================== */
+/* Debugging Fixes */
+/* ================== */
+
+/* 1. Fix Z-Index Hierarchy */
+.footer-background {
+  z-index: 1 !important; /* Behind content but above page */
+}
+
+.footer-foreground {
+  z-index: 2 !important; /* Main content container */
+}
+
+.social-media-container {
+  z-index: 3 !important; /* Above footer layers */
+}
+
+/* 2. Ensure Proper Stacking Context */
+footer {
+  position: relative;
+  isolation: isolate; /* Creates new stacking context */
+}
+
+/* 3. Fix Overflow Issues */
+.footercontainer {
+  overflow: visible !important; /* Prevents clipping */
+}
+
+/* 4. Social Icons Visibility */
+.logos {
+  position: relative;
+  transform: translateZ(0); /* GPU layer boost */
+}
+
+/* 5. Contact Form Protection */
+.contact-container {
+  z-index: 2;
+  position: relative;
+}
