@@ -45,7 +45,7 @@ body {
 .project-box,
 .resume-btn,
 footer {
-    overflow: hidden
+    overflow: !
 }
 
 .cta,
@@ -2036,7 +2036,7 @@ footer {
 }
 
 .contact-subtitle {
-  font-size: 1.2rem;
+  font-size: 1.779rem;
   margin-bottom: 40px;
   color: #ccc;
 }
@@ -2061,12 +2061,14 @@ footer {
 
 .contact-form input,
 .contact-form textarea {
-  padding: 14px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  background: #1e1e1e;
-  color: #fff;
+  padding: 7px;
+    font-size: 2rem;
+    border: none;
+    border-radius: 8px;
+    background: #1e1e1e;
+    color: #fff;
+    height: 55px;
+    width: 999px;
 }
 
 .contact-form textarea {
