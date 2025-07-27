@@ -330,9 +330,132 @@ footer {
     padding: 40px 15px;
   }
   
+/* ====================== */
+/* Footer Structure Fixes */
+/* ====================== */
+
+footer {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}
+
+.footer-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.footer-blob {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  z-index: 0;
+}
+
+.footer-foreground {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+}
+
+.footercontainer {
+  width: 100%;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* Contact Section Fixes */
+.contact-container {
+  order: 1;
+  background: rgba(30, 30, 30, 0.8);
+  padding: 40px;
+  border-radius: 20px;
+  z-index: 3;
+}
+
+/* Quote Section Fixes */
+.two-words {
+  order: 2;
+  text-align: center;
+  position: relative;
+}
+
+.two-words article {
+  font-size: 2.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.two-words article::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(90deg, #6bc5f8, #cf59e6);
+  margin: 20px auto 0;
+}
+
+/* Social Media Section Fixes */
+.social-media-container {
+  order: 3;
+  z-index: 10;
+  position: relative;
+}
+
+.getintouch-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.getintouch-heading article {
+  font-size: 2rem;
+  display: inline-block;
+}
+
+.getintouch-heading article::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, #6bc5f8, #cf59e6);
+  margin: 15px auto 0;
+}
+
+.logos {
+  z-index: 11;
+}
+
+/* Footer Avatar Fixes */
+.footer-avatar-container {
+  order: 4;
+  margin: 40px 0;
+}
+
+/* Footer Bottom Fixes */
+.footer-bottom {
+  order: 5;
+  margin-top: 40px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .footercontainer {
+    padding: 40px 15px;
+    gap: 40px;
+  }
+  
   .contact-container {
     padding: 30px 20px;
-    margin-bottom: 40px;
   }
   
   .two-words article {
@@ -341,50 +464,5 @@ footer {
   
   .getintouch-heading article {
     font-size: 1.8rem;
-  }
-  
-  .logos {
-    gap: 20px;
-  }
-  
-  .social-media-container a {
-    width: 50px;
-    height: 50px;
-  }
-}
-
-@media (max-width: 480px) {
-  .footercontainer {
-    padding: 30px 10px;
-  }
-  
-  .contact-container {
-    padding: 20px 15px;
-  }
-  
-  .contact-title {
-    font-size: 2.2rem;
-  }
-  
-  .contact-subtitle {
-    font-size: 1rem;
-    margin-bottom: 30px;
-  }
-  
-  .input-group {
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .contact-form button {
-    align-self: center;
-  }
-  
-  .two-words article {
-    font-size: 1.8rem;
-  }
-  
-  .footer-bottom article {
-    font-size: 1.2rem;
   }
 }
