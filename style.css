@@ -1558,52 +1558,6 @@ footer {
     color: #000
 }
 
-.contact-form {
-  max-width: 400px;
-  margin-top: 20px;
-  color: white;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 15px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  background-color: #222;
-  border: 1px solid #555;
-  color: #eee;
-  padding: 10px 12px;
-  border-radius: 8px;
-  font-size: 14px;
-  outline: none;
-  transition: border-color 0.2s ease;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #888;
-}
-
-.contact-form button {
-  background-color: #444;
-  color: #fff;
-  border: none;
-  padding: 10px 16px;
-  font-size: 14px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.contact-form button:hover {
-  background-color: #666;
-}
-
-
 @media screen and (max-width:1920px) {
     html {
         font-size: 60%
@@ -2062,4 +2016,76 @@ footer {
         height: fit-content;
         margin-top: 100px;  
     }
+}
+
+/* Contact Section Wrapper */
+#contact-me {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+  color: #f0f0f5;
+  font-family: 'Segoe UI', sans-serif;
+}
+#contact-me h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+#contact-me p {
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+}
+
+/* Form Layout */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contact-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 16px;
+  background: #22232a;
+  border: 1px solid #444;
+  border-radius: 8px;
+  color: #ccc;
+  font-size: 1.4rem;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #888;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #666;
+}
+
+/* Button Style */
+.contact-form button {
+  align-self: flex-end;
+  padding: 14px 24px;
+  background: #ffffff;
+  color: #000;
+  font-size: 1.4rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.contact-form button:hover {
+  background: #e2e2e2;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .contact-form .form-row {
+    grid-template-columns: 1fr;
+  }
 }
