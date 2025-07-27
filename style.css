@@ -45,7 +45,7 @@ body {
 .project-box,
 .resume-btn,
 footer {
-    overflow: !
+    overflow: hidden
 }
 
 .cta,
@@ -89,7 +89,7 @@ html {
     cursor: default;
     --color-white: #fff;
     --color-black: #000;
-    --color-dark-mode: #11111b;
+    --color-dark-mode: #0b0b0b;
     --color-light-mode: #ece7e1;
     --color-ddd-color: #ddd;
     --color-gray: #c4c4c4;
@@ -1386,7 +1386,7 @@ footer {
 
 .getintouch-heading,
 .logos {
-    height: 80px;
+    height: 53px;
     width: 100%;
     display: flex
 }
@@ -2022,7 +2022,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 60px 20px;
+  padding: 0px 20px;
   max-width: 600px;
   margin: 0 auto;
   z-index: 1;
