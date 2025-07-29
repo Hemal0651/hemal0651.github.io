@@ -1393,7 +1393,7 @@ footer {
 
 .two-words article {
     font-size: 3rem;
-padding-bottom: 1050px;
+padding-bottom: 1035px;
 }
 
 .social-media-container {
@@ -1430,7 +1430,7 @@ padding-bottom: 1050px;
     background-clip: text;
     -webkit-background-clip: text;
     font-weight: 700;
-padding-bottom: 970px;
+padding-bottom: 994px;
 }
 
 .fa-copyright,
@@ -2061,16 +2061,15 @@ padding-bottom: 970px;
   min-width: 200px;
 }
 
-.contact-form input,
-.contact-form textarea {
-  padding: 7px;
-    font-size: 2rem;
+.contact-form input, .contact-form textarea {
+    padding: 18px;
+    font-size: 2.2rem;
     border: none;
-    border-radius: 8px;
+    border-radius: 17px;
     background: #1e1e1e;
     color: #fff;
-    height: 55px;
-    width: 999px;
+    height: 100px;
+    width: 599px;
 }
 
 .contact-form textarea {
