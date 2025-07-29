@@ -1393,6 +1393,7 @@ footer {
 
 .two-words article {
     font-size: 3rem
+padding-bottom: 1050px;
 }
 
 .social-media-container {
@@ -1428,7 +1429,8 @@ footer {
     background: linear-gradient(-45deg, var(--color-light-blue), var(--color-light-purple), var(--color-light-blue), var(--color-light-purple));
     background-clip: text;
     -webkit-background-clip: text;
-    font-weight: 700
+    font-weight: 700;
+padding-bottom: 970px;
 }
 
 .fa-copyright,
@@ -2022,7 +2024,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px 20px;
+  padding: 0px;
   max-width: 600px;
   margin: 0 auto;
   z-index: 1;
@@ -2078,7 +2080,7 @@ footer {
 .contact-form button {
   padding: 14px;
   font-size: 1.1rem;
-  background: #fff;
+  background: #b465c3a8;
   color: #000;
   border: none;
   border-radius: 6px;
@@ -2133,5 +2135,6 @@ footer {
 /* 5. Contact Form Protection */
 .contact-container {
   z-index: 2;
-  position: relative;
+  position: absolute;
+padding-bottom: 520px;
 }
