@@ -1426,7 +1426,7 @@ padding-bottom: 1035px;
 
 .getintouch-heading article {
     font-size: 2rem;
-    background: linear-gradient(-45deg, var(--color-light-blue), var(--color-light-purple), var(--color-light-blue), var(--color-light-purple));
+    background: linear-gradient(-90deg, var(--color-light-blue), var(--color-light-purple), var(--color-light-blue), var(--color-light-purple));
     background-clip: text;
     -webkit-background-clip: text;
     font-weight: 700;
