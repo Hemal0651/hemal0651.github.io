@@ -2026,84 +2026,94 @@ transform: translateY(-540px);
     }
 }
 
+/* Predictable sizing */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+/* ===== Contact Section ===== */
 .contact-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
+  /* never exceed the screen; center and add side padding */
+  max-width: 600px;
+  width: 100%;
   padding: 0 16px;
-  width: min(600px, 100%);
   margin: 0 auto;
-  z-index: 1;
   position: relative;
+  z-index: 1;
 }
 
+/* Titles */
 .contact-title {
-  font-size: 2.8rem;
-  margin-bottom: 10px;
   color: #fff;
+  margin-bottom: 10px;
+  /* scale but don’t explode on mobile */
+  font-size: clamp(1.6rem, 5vw, 2.2rem);
+  text-align: center;
 }
 
 .contact-subtitle {
-  font-size: 1.779rem;
-  margin-bottom: 40px;
   color: #ccc;
+  margin-bottom: 24px;
+  font-size: clamp(1rem, 3.5vw, 1.125rem);
+  text-align: center;
 }
 
+/* Form wrapper */
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
   align-items: stretch;
 }
 
+/* Top row: name + email/phone */
 .input-group {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
 }
 
-.input-group input {
-  flex: 1 1 260px;
-  min-width: 0;
-}
-
+/* Inputs / Textarea base */
 .contact-form input,
 .contact-form textarea {
   width: 100%;
   max-width: 100%;
-  height: auto;
-  min-height: 56px;
-  padding: 18px;
-  font-size: clamp(1rem, 3.5vw, 2.2rem);
+  padding: 16px;
   border: none;
   border-radius: 17px;
   background: #1e1e1e;
   color: #fff;
   font-family: Raleway, system-ui, sans-serif;
+  /* Keep >=16px to avoid iOS zoom-on-focus */
+  font-size: 1rem;
+  line-height: 1.4;
   font-weight: 600;
 }
 
+/* Inputs get a comfortable min height via padding; no fixed height needed */
+
+/* Textarea: fixed but reasonable height, NOT resizable */
 .contact-form textarea {
-  resize: vertical;
-  min-height: 120px;
+  min-height: 140px;
+  resize: none;          /* <- no extend handle */
+  overflow: auto;        /* scroll if someone types a novel */
 }
 
+/* Button */
 .contact-form button {
-  padding: 14px 20px;
-  font-size: 1.1rem;
+  padding: 12px 18px;
+  font-size: 1rem;
   background: #b465c3a8;
   color: #000;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  width: auto;
-  align-self: flex-end;
+  align-self: end;       /* right align on desktop */
   font-weight: 900;
   font-family: Raleway, system-ui, sans-serif;
   transition: transform .2s ease;
@@ -2113,59 +2123,17 @@ transform: translateY(-540px);
   transform: translateY(-1px);
 }
 
-@media (max-width: 600px) {
-  .contact-title {
-    font-size: clamp(1.6rem, 6vw, 2.2rem);
-  }
-
-  .contact-subtitle {
-    font-size: clamp(1rem, 4.2vw, 1.2rem);
-  }
-
+/* ===== Mobile tweaks ===== */
+@media (max-width: 640px) {
   .input-group {
-    flex-direction: column;
+    grid-template-columns: 1fr;     /* stack neatly on phones */
   }
 
   .contact-form button {
-    align-self: stretch;
+    align-self: stretch;            /* full-width button feels better */
   }
 }
 
-/* ================== */
-/* Debugging Fixes */
-/* ================== */
-
-/* 1. Fix Z-Index Hierarchy */
-.footer-background {
-  z-index: 1 !important; /* Behind content but above page */
-}
-
-.footer-foreground {
-  z-index: 2 !important; /* Main content container */
-}
-
-.social-media-container {
-  z-index: 3 !important; /* Above footer layers */
-}
-
-/* 2. Ensure Proper Stacking Context */
-footer {
-  position: relative;
-  isolation: isolate; /* Creates new stacking context */
-}
-
-/* 3. Fix Overflow Issues */
-.footercontainer {
-  overflow: visible !important; /* Prevents clipping */
-}
-
-/* 4. Social Icons Visibility */
-.logos {
-  position: relative;
-  transform: translateZ(0); /* GPU layer boost */
-}
-
-/* 5. Contact Form Protection */
 .contact-container {
   z-index: 2;
   position: absolute;
