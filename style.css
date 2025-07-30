@@ -2139,7 +2139,8 @@ transform: translateY(-534px);
 .contact-container {
   z-index: 2;
   position: absolute;
-padding-bottom: 520px;
+transform: translateY(-620px);
+    margin-bottom: -100px;
 }
 .frontend-dev-heading {
   font-family: Raleway;
