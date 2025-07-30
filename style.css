@@ -1342,7 +1342,7 @@ footer {
 
 .footer-background {
     width: 100%;
-    height: 140vh;
+    height: 150vh;
     background-color: #0b0b0b;
     display: flex;
     align-items: flex-end;
@@ -1434,7 +1434,7 @@ footer {
     background-clip: text;
     -webkit-background-clip: text;
     font-weight: 700;
-transform: translateY(-540px);
+transform: translateY(-534px);
     margin-bottom: -100px;
 }
 
@@ -2052,7 +2052,7 @@ transform: translateY(-540px);
   color: #fff;
   margin-bottom: 10px;
   /* scale but don’t explode on mobile */
-  font-size: clamp(1.6rem, 5vw, 2.2rem);
+  font-size: 3.4rem;
   text-align: center;
 }
 
@@ -2061,6 +2061,7 @@ transform: translateY(-540px);
   margin-bottom: 24px;
   font-size: clamp(1rem, 3.5vw, 1.125rem);
   text-align: center;
+  font-size: 1.7rem;
 }
 
 /* Form wrapper */
@@ -2090,7 +2091,7 @@ transform: translateY(-540px);
   color: #fff;
   font-family: Raleway, system-ui, sans-serif;
   /* Keep >=16px to avoid iOS zoom-on-focus */
-  font-size: 1rem;
+  font-size: 1.7rem;
   line-height: 1.4;
   font-weight: 600;
 }
@@ -2107,7 +2108,7 @@ transform: translateY(-540px);
 /* Button */
 .contact-form button {
   padding: 12px 18px;
-  font-size: 1rem;
+  font-size: 1.6rem;
   background: #b465c3a8;
   color: #000;
   border: none;
