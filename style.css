@@ -2026,12 +2026,18 @@ transform: translateY(-540px);
     }
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .contact-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px;
-  max-width: 600px;
+  padding: 0 16px;
+  width: min(600px, 100%);
   margin: 0 auto;
   z-index: 1;
   position: relative;
@@ -2063,50 +2069,68 @@ transform: translateY(-540px);
 }
 
 .input-group input {
-  flex: 1;
-  min-width: 200px;
+  flex: 1 1 260px;
+  min-width: 0;
 }
 
-.contact-form input, .contact-form textarea {
-    padding: 18px;
-    font-size: 2.2rem;
-    border: none;
-    border-radius: 17px;
-    background: #1e1e1e;
-    color: #fff;
-    height: 100px;
-    width: 599px;
-    font-family: Raleway;
-    font-weight: 600;
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  min-height: 56px;
+  padding: 18px;
+  font-size: clamp(1rem, 3.5vw, 2.2rem);
+  border: none;
+  border-radius: 17px;
+  background: #1e1e1e;
+  color: #fff;
+  font-family: Raleway, system-ui, sans-serif;
+  font-weight: 600;
 }
 
 .contact-form textarea {
-  resize: none;
+  resize: vertical;
+  min-height: 120px;
 }
 
 .contact-form button {
-  padding: 14px;
+  padding: 14px 20px;
   font-size: 1.1rem;
   background: #b465c3a8;
   color: #000;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
-  width: fit-content;
+  width: auto;
   align-self: flex-end;
-      font-weight: 900;
-    font-family: Raleway;
+  font-weight: 900;
+  font-family: Raleway, system-ui, sans-serif;
+  transition: transform .2s ease;
+}
+
+.contact-form button:hover {
+  transform: translateY(-1px);
 }
 
 @media (max-width: 600px) {
+  .contact-title {
+    font-size: clamp(1.6rem, 6vw, 2.2rem);
+  }
+
+  .contact-subtitle {
+    font-size: clamp(1rem, 4.2vw, 1.2rem);
+  }
+
   .input-group {
     flex-direction: column;
   }
 
   .contact-form button {
-    align-self: center;
+    align-self: stretch;
   }
 }
+
 /* ================== */
 /* Debugging Fixes */
 /* ================== */
