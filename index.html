@@ -640,32 +640,33 @@ What are you doing here?! you sneaky developer...
       });
     });
   </script>
- <button id="fakeSupportBtn" style="
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 10px 20px;
-  background-color: #794bc4;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  z-index: 9999;
-">Support Me</button>
+<style>
+  #rickroll-btn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background-color: #794bc4;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-family: Raleway;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+  }
 
-<script>
-  document.getElementById('fakeSupportBtn').addEventListener('click', function() {
-    // Classic Rickroll redirect
-    window.location.href = 'https://youtu.be/dQw4w9WgXcQ?si=zpoiSXKctv-lDprZ';
-    
-    // Optional: Add fake loading to seem legit
-    this.textContent = 'Redirecting...';
-    setTimeout(() => {
-      this.textContent = 'Support Me'; // Reset if they come back
-    }, 1500);
-  });
-</script>
-</body>
+  #rickroll-btn img {
+    height: 20px;
+    margin-right: 10px;
+  }
+</style>
+
+<a id="rickroll-btn" href="https://youtu.be/dQw4w9WgXcQ?si=zpoiSXKctv-lDprZ" target="_blank">
+  <img src="https://storage.ko-fi.com/cdn/cup-border.png" alt="Ko-fi">
+  Support me
+</a></body>
 
 </html>
