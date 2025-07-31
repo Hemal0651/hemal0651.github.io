@@ -168,16 +168,14 @@ html {
     transition: .2s
 }
 
+.activeThistab:before,
 .navbar-tabs-ul li:hover:before {
-    content: "";
-    position: absolute;
     background-color: var(--color-white);
     height: 10px;
     width: 10px;
-    left: -20px;
-    border-radius: 5px;
-    z-index: -1;
+    left: -20px
 }
+
 .light-mode {
     --color-dark-mode: #ece7e1;
     --color-black: #fff;
@@ -531,14 +529,8 @@ noscript {
 }
 
 .activeThistab:before {
-    content: "";
-    position: absolute;
-    background-color: var(--color-white);
-    height: 10px;
-    width: 10px;
-    left: -20px;
-    border-radius: 5px;
-    z-index: -1;
+    border-radius: 50%;
+    z-index: -1
 }
 
 .dp::after,
