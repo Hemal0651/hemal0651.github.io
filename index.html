@@ -640,13 +640,30 @@ What are you doing here?! you sneaky developer...
       });
     });
   </script>
- <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+ <button id="fakeSupportBtn" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #794bc4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 9999;
+">Support Me</button>
+
 <script>
-  kofiWidgetOverlay.draw('vinodjangid07', {
-    'type': 'floating-chat',
-    'floating-chat.donateButton.text': 'Support me',
-    'floating-chat.donateButton.background-color': '#794bc4',
-    'floating-chat.donateButton.text-color': '#fff'
+  document.getElementById('fakeSupportBtn').addEventListener('click', function() {
+    // Classic Rickroll redirect
+    window.location.href = 'https://youtu.be/dQw4w9WgXcQ?si=zpoiSXKctv-lDprZ';
+    
+    // Optional: Add fake loading to seem legit
+    this.textContent = 'Redirecting...';
+    setTimeout(() => {
+      this.textContent = 'Support Me'; // Reset if they come back
+    }, 1500);
   });
 </script>
 </body>
