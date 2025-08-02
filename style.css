@@ -570,11 +570,12 @@ noscript {
 
 .landing-page-container {
     width: 100%;
-    height: calc(100vh - 115px);
+    /* ensure it’s at least full-height minus header, but can grow taller */
+    min-height: calc(100vh - 115px);
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center
+    justify-content: center;
 }
 
 .text-content {
@@ -2021,8 +2022,8 @@ transform: translateY(-534px);
 
 @media only screen and (max-width: 1300px) and (max-height: 730px){
     .landing-page-container {
-        height: fit-content;
-        margin-top: 100px;  
+         min-height: calc(100vh - 115px);
+    margin-top: 100px;  
     }
 }
 
@@ -2230,3 +2231,45 @@ main {
     margin-bottom: 2rem;
   }
 }
+:root { --header-height: 115px; }
+
+section[id] {
+  scroll-margin-top: var(--header-height);
+}
+
+main {
+  padding-top: var(--header-height);
+}
+
+/* Small phones: stack from the top instead of centering */
+@media screen and (max-width: 600px) {
+  .landing-page-container {
+    /* let content flow top→down */
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    padding: 1.5rem 1rem;             /* give breathing room */
+    min-height: auto !important;      /* no forced fill on tiny screens */
+  }
+
+  .text-content {
+    width: 100% !important;
+    text-align: left !important;
+    margin-top: 1rem;                 /* separate from avatar/blob */
+  }
+
+  #hello-friend { font-size: 1.6rem !important; }
+  #name { font-size: 3rem !important; }
+  #work { font-size: 1.8rem !important; }
+  #info-para {
+    font-size: 1.2rem !important;
+    line-height: 1.4 !important;
+  }
+
+  /* if you have an avatar or blob image beside text, make it full-width */
+  .image-div {
+    width: 100% !important;
+    margin-bottom: 1.5rem;
+  }
+}
+
