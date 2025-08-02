@@ -2147,9 +2147,3 @@ transform: translateY(-620px);
     font-weight: 699;
     font-size: 7rem;
 }
-
-@media screen and (max-width: 768px) {
-  html { font-size: 90%; }   /* slightly shrink base font */
-  .landing-page-container {
-    padding: 1.5rem 1rem;
-  }
