@@ -41,10 +41,9 @@ What are you doing here?! you sneaky developer...
 
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" id="dynamic-viewport" content="width=1920, initial-scale=1" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#000" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description"
     content="Hemal Farouqe | Portfolio, Visit and know about me & my projects/designs. I value simple content structure, clean design patterns, and thoughtful interactions." />
   <meta name="keywords"
@@ -76,7 +75,6 @@ What are you doing here?! you sneaky developer...
     href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" />
 
 <body class="body">
-<div id="scale-wrapper">
   <audio loop="" id="audioPlayer" style="display: none">
     <source src="src/mp3/preloader.mp3" type="audio/mp3" />
   </audio>
@@ -587,7 +585,6 @@ What are you doing here?! you sneaky developer...
       </div>
     </div>
   </footer>
- </div>
   <!-- footer ends here -->
 
   <script src="main.js"></script>
@@ -640,6 +637,22 @@ What are you doing here?! you sneaky developer...
       });
     });
   </script>
+<script>
+  ;(function() {
+    const meta = document.getElementById('dynamic-viewport');
+    function updateViewport() {
+      const w = window.innerWidth;
+      // calculate scale so that 1920px design fits exactly in w px viewport
+      const scale = (w / 1920).toFixed(4);
+      // set width to 1920 and appropriate initial-scale
+      meta.setAttribute('content', \`width=1920, initial-scale=\${scale}, maximum-scale=1\`);
+    }
+    // run on load and resize
+    window.addEventListener('resize', updateViewport);
+    updateViewport();
+  })();
+</script>
+
 <style>
   #rickroll-btn {
     position: fixed;
@@ -668,31 +681,6 @@ What are you doing here?! you sneaky developer...
 <a id="rickroll-btn" href="https://youtu.be/dQw4w9WgXcQ?si=zpoiSXKctv-lDprZ" target="_blank">
   <img src="https://storage.ko-fi.com/cdn/cup-border.png" alt="Ko-fi">
   Support me
-</a>
-<script>
-  (function() {
-    const wrapper = document.getElementById('scale-wrapper');
-
-    function rescale() {
-      const w = window.innerWidth;
-      // if below 768px, compute a scale so 768 → 100% of your 1920 layout
-      if (w < 768) {
-        const scale = w / 1920;
-        wrapper.style.transform = 'scale(' + scale + ')';
-        // to avoid horizontal scroll, bump wrapper width back up
-        wrapper.style.width = (1920 * scale) + 'px';
-      } else {
-        // reset for larger viewports
-        wrapper.style.transform = '';
-        wrapper.style.width = '';
-      }
-    }
-
-    window.addEventListener('resize', rescale);
-    rescale();
-  })();
-</script>
-
-</body>
+</a></body>
 
 </html>
