@@ -2150,6 +2150,6 @@ transform: translateY(-620px);
 
 @media screen and (max-width: 768px) {
   html {
-    zoom: 0.8;           /* shrink everything to 80% */
+    zoom: 0.5;           /* shrink everything to 80% */
   }
 }
