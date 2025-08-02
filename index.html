@@ -76,6 +76,7 @@ What are you doing here?! you sneaky developer...
     href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" />
 
 <body class="body">
+<div id="scale-wrapper">
   <audio loop="" id="audioPlayer" style="display: none">
     <source src="src/mp3/preloader.mp3" type="audio/mp3" />
   </audio>
@@ -586,6 +587,7 @@ What are you doing here?! you sneaky developer...
       </div>
     </div>
   </footer>
+ </div>
   <!-- footer ends here -->
 
   <script src="main.js"></script>
@@ -666,6 +668,31 @@ What are you doing here?! you sneaky developer...
 <a id="rickroll-btn" href="https://youtu.be/dQw4w9WgXcQ?si=zpoiSXKctv-lDprZ" target="_blank">
   <img src="https://storage.ko-fi.com/cdn/cup-border.png" alt="Ko-fi">
   Support me
-</a></body>
+</a>
+<script>
+  (function() {
+    const wrapper = document.getElementById('scale-wrapper');
+
+    function rescale() {
+      const w = window.innerWidth;
+      // if below 768px, compute a scale so 768 → 100% of your 1920 layout
+      if (w < 768) {
+        const scale = w / 1920;
+        wrapper.style.transform = 'scale(' + scale + ')';
+        // to avoid horizontal scroll, bump wrapper width back up
+        wrapper.style.width = (1920 * scale) + 'px';
+      } else {
+        // reset for larger viewports
+        wrapper.style.transform = '';
+        wrapper.style.width = '';
+      }
+    }
+
+    window.addEventListener('resize', rescale);
+    rescale();
+  })();
+</script>
+
+</body>
 
 </html>
