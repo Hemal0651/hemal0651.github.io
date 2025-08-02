@@ -2148,8 +2148,8 @@ transform: translateY(-620px);
     font-size: 7rem;
 }
 
-@media screen and (max-width: 768px) {
-  html {
-    zoom: 0.5;           /* shrink everything to 80% */
-  }
+#scale-wrapper {
+  /* scale from the top-left corner so the page stays pinned */
+  transform-origin: top left;
 }
+
