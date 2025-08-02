@@ -41,9 +41,10 @@ What are you doing here?! you sneaky developer...
 
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" id="dynamic-viewport" content="width=1920, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description"
     content="Hemal Farouqe | Portfolio, Visit and know about me & my projects/designs. I value simple content structure, clean design patterns, and thoughtful interactions." />
   <meta name="keywords"
@@ -637,22 +638,6 @@ What are you doing here?! you sneaky developer...
       });
     });
   </script>
-<script>
-  ;(function() {
-    const meta = document.getElementById('dynamic-viewport');
-    function updateViewport() {
-      const w = window.innerWidth;
-      // calculate scale so that 1920px design fits exactly in w px viewport
-      const scale = (w / 1920).toFixed(4);
-      // set width to 1920 and appropriate initial-scale
-      meta.setAttribute('content', \`width=1920, initial-scale=\${scale}, maximum-scale=1\`);
-    }
-    // run on load and resize
-    window.addEventListener('resize', updateViewport);
-    updateViewport();
-  })();
-</script>
-
 <style>
   #rickroll-btn {
     position: fixed;
