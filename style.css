@@ -570,12 +570,11 @@ noscript {
 
 .landing-page-container {
     width: 100%;
-    /* ensure it’s at least full-height minus header, but can grow taller */
-    min-height: calc(100vh - 115px);
+    height: calc(100vh - 115px);
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .text-content {
@@ -2022,8 +2021,8 @@ transform: translateY(-534px);
 
 @media only screen and (max-width: 1300px) and (max-height: 730px){
     .landing-page-container {
-         min-height: calc(100vh - 115px);
-    margin-top: 100px;  
+        height: fit-content;
+        margin-top: 100px;  
     }
 }
 
@@ -2149,127 +2148,8 @@ transform: translateY(-620px);
     font-size: 7rem;
 }
 
-/* at the very bottom of style.css */
-
-:root {
-  --header-height: 115px;
-}
-
-/* Offset all sections so anchor jumps land below header */
-section[id] {
-  scroll-margin-top: var(--header-height);
-}
-
-
-/* also near the bottom of style.css */
-
-main {
-  padding-top: var(--header-height);
-}
-
-
-/* For tablets and phones */
 @media screen and (max-width: 768px) {
   html {
-    /* keep base font smaller */
-    font-size: 55%;
-  }
-
-  /* Stack landing-page vertically */
-  .landing-page-container {
-    flex-direction: column;
-    height: auto;          /* let it grow */
-    padding: 2rem 1rem;    /* some breathing room */
-  }
-
-  .text-content {
-    width: 100%;
-    align-items: center;
-    text-align: center;
-  }
-
-  #hello-friend {
-    font-size: 2.2rem;
-  }
-  #name, #work {
-    font-size: 5rem;
-  }
-  #info-para {
-    font-size: 1.6rem;
-    width: 100%;
-    padding-top: 1.5rem;
-    line-height: 1.4;
-  }
-
-  /* Shrink navbar items */
-  .navbar-tabs-ul {
-    gap: 20px;
-  }
-  .navbar-tabs-ul a {
-    font-size: 1.8rem;
-  }
-
-  /* Project cards stack */
-  .project-box {
-    flex-direction: column;
-    height: auto;
-  }
-  .project-box .info-div,
-  .project-box .image-div {
-    width: 100%;
-    padding: 1rem;
-  }
-
-  /* About section image/text stack */
-  .info-dp-section {
-    flex-direction: column;
-    text-align: center;
-  }
-  .about-info,
-  .dp {
-    width: 100%;
-    margin-bottom: 2rem;
+    zoom: 0.8;           /* shrink everything to 80% */
   }
 }
-:root { --header-height: 115px; }
-
-section[id] {
-  scroll-margin-top: var(--header-height);
-}
-
-main {
-  padding-top: var(--header-height);
-}
-
-/* Small phones: stack from the top instead of centering */
-@media screen and (max-width: 600px) {
-  .landing-page-container {
-    /* let content flow top→down */
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    justify-content: flex-start !important;
-    padding: 1.5rem 1rem;             /* give breathing room */
-    min-height: auto !important;      /* no forced fill on tiny screens */
-  }
-
-  .text-content {
-    width: 100% !important;
-    text-align: left !important;
-    margin-top: 1rem;                 /* separate from avatar/blob */
-  }
-
-  #hello-friend { font-size: 1.6rem !important; }
-  #name { font-size: 3rem !important; }
-  #work { font-size: 1.8rem !important; }
-  #info-para {
-    font-size: 1.2rem !important;
-    line-height: 1.4 !important;
-  }
-
-  /* if you have an avatar or blob image beside text, make it full-width */
-  .image-div {
-    width: 100% !important;
-    margin-bottom: 1.5rem;
-  }
-}
-
