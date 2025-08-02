@@ -1814,7 +1814,7 @@ transform: translateY(-534px);
 
 @media screen and (max-width:768px) {
     html {
-        font-size: 30%
+        font-size: 10%
     }
 
     .text-content {
