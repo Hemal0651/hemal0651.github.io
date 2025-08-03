@@ -1319,8 +1319,12 @@ footer {
     z-index: 101;
     text-align: center;
     transition: .4s;
-    display: none
+    display: none;
+    background-color: var(--color-white); /* or your preferred color */
+    border-radius: 2rem; /* pill shape */
+    padding: 0.5rem;
 }
+
 
 #backtotopbutton article {
     font-size: 1.5rem;
