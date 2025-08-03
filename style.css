@@ -1106,7 +1106,8 @@ noscript {
 .tech-stack-box,
 .tooltip {
     align-items: center;
-    display: flex
+    display: flex;
+color: var(--color-white);
 }
 
 .tech-stack-box {
