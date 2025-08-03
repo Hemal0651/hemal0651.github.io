@@ -2186,17 +2186,25 @@ transform: translateY(-620px);
   margin-bottom: 0.5rem;
 }
 
-.friend-link {
-  color: #00bfff;
-  text-decoration: none;
+/* Pill-shaped button style */
+.friend-btn {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  border-radius: 9999px;       /* full pill */
+  background-color: #00bfff;   /* accent color */
+  color: #fff;
   font-weight: 500;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-.friend-link:hover {
-  text-decoration: underline;
+.friend-btn:hover {
+  transform: translateY(-2px);
+  background-color: #009acd;   /* darker on hover */
 }
-AOS.init({
-  once: false,   // allow animation every time you scroll in
-  mirror: true,  // optional: animate out elements when scrolling past them
-});
 
+.friend-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
