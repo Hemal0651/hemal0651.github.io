@@ -2195,4 +2195,8 @@ transform: translateY(-620px);
 .friend-link:hover {
   text-decoration: underline;
 }
+AOS.init({
+  once: false,   // allow animation every time you scroll in
+  mirror: true,  // optional: animate out elements when scrolling past them
+});
 
