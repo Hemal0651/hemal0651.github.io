@@ -2182,7 +2182,7 @@ transform: translateY(-620px);
 .friend-name {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--color-white);
   margin-bottom: 0.5rem;
 }
 
@@ -2212,8 +2212,7 @@ transform: translateY(-620px);
 
 /* Use your light/dark mode variables for card background and text */
 .friend-card {
-  background-color: var(--color-dark-mode);
-  color: var(--color-white);
+  background-color: var(--tech-stack-box-first-color);
 }
 
 /* Intro paragraph styling */
