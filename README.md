@@ -10,6 +10,7 @@
 [![Email](https://img.shields.io/badge/Email-hemalfarouqe0651-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:hemalfarouqe0651@gmail.com)
 
 ![Visitor Count](https://visitor-badge.litepi.com/p?page_id=Hemal0651.hemal0651.github.io)
+![Portfolio Preview](public/screenshot.jpg)
 
 </div>
 
