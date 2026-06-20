@@ -1,0 +1,96 @@
+import React from "react";
+
+interface HLogoProps {
+  className?: string;
+}
+
+export default function HLogo({ className = "w-9 h-9" }: HLogoProps) {
+  return (
+    <svg
+      viewBox="0 0 100 100"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={`${className} select-none`}
+      aria-hidden="true"
+    >
+      <defs>
+        {/* Main H-structure gradient: glossy high-end orange to red-orange */}
+        <linearGradient id="h-logo-grad" x1="15%" y1="10%" x2="85%" y2="90%">
+          <stop offset="0%" stopColor="#FF7E21" /> {/* Shiny bright orange */}
+          <stop offset="60%" stopColor="#F95D02" /> {/* Strong vermilion */}
+          <stop offset="100%" stopColor="#D83F00" /> {/* Rich dark orange/red */}
+        </linearGradient>
+
+        {/* Orbit ring/swoosh gradient: dynamic, glowing, metal-like horizontal shine */}
+        <linearGradient id="h-swoosh-grad" x1="0%" y1="50%" x2="100%" y2="50%">
+          <stop offset="0%" stopColor="#FF8F3D" />
+          <stop offset="35%" stopColor="#FFD29E" /> {/* Gloss highlight shine */}
+          <stop offset="70%" stopColor="#F95D02" />
+          <stop offset="100%" stopColor="#BF3300" />
+        </linearGradient>
+
+        {/* Left crescent accent gradient for premium depth */}
+        <linearGradient id="crescent-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#FF852E" />
+          <stop offset="100%" stopColor="#EA4E00" />
+        </linearGradient>
+      </defs>
+
+      {/* Back orbit segment (curves behind the H stems to create 3D overlap) */}
+      <path
+        d="M 52 50 C 66 43, 85 41, 84 51 C 83 61, 65 67, 50 69"
+        stroke="url(#h-swoosh-grad)"
+        strokeWidth="3.2"
+        strokeLinecap="round"
+        opacity="0.85"
+      />
+
+      {/* Left Vertical Pillar of H */}
+      <path
+        d="M 37.0 23.5
+           C 35.0 24.5, 31.5 26.5, 27.5 26.5
+           L 29.0 29.5
+           C 31.5 29.5, 33.5 28.5, 37.0 27.5
+           L 37.0 73.5
+           L 44.5 73.5
+           L 44.5 23.5
+           Z"
+        fill="url(#h-logo-grad)"
+      />
+
+      {/* Right Vertical Pillar of H */}
+      <path
+        d="M 54.5 21.0
+           L 62.0 21.0
+           L 62.0 63.5
+           C 62.0 68.5, 60.0 73.5, 53.0 75.5
+           C 48.0 77.0, 45.0 73.0, 45.0 73.0
+           L 47.0 69.5
+           C 47.0 69.5, 50.0 72.0, 53.0 70.5
+           C 55.0 69.5, 54.5 66.5, 54.5 63.5
+           Z"
+        fill="url(#h-logo-grad)"
+      />
+
+      {/* Active Foreground Sweeping Orbit / Diagonal Swoosh */}
+      <path
+        d="M 19.0 55.0
+           C 25.5 40.5, 39.5 33.0, 56.0 29.5
+           C 74.0 26.0, 89.0 31.5, 90.5 37.0
+           C 92.0 42.5, 81.0 48.0, 67.5 51.5
+           C 50.5 55.8, 28.5 58.5, 19.0 55.0
+           Z"
+        fill="url(#h-swoosh-grad)"
+      />
+
+      {/* Left Decorative Crescent Edge (echoes the double swoosh glow in user logo) */}
+      <path
+        d="M 27.5 55.5
+           C 14.5 49.5, 17.5 37.0, 29.5 30.5"
+        stroke="url(#crescent-grad)"
+        strokeWidth="3.2"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
