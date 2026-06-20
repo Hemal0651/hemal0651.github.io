@@ -2,7 +2,7 @@
 
 > Designing Systems That Scale, Engineered for Precision.
 
-![Portfolio Preview](assets/screenshot.png)
+![Portfolio Preview](public/screenshot.png)
 
 🌐 **Live:** [hemal0651.me](https://hemal0651.me)
 
