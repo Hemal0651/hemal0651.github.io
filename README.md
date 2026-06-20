@@ -9,7 +9,8 @@
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Hemal%20Farouqe-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/hemal-farouqe)
 [![Email](https://img.shields.io/badge/Email-hemalfarouqe0651-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:hemalfarouqe0651@gmail.com)
 
-![Visitor Count](https://visitor-badge.litepi.com/p?page_id=Hemal0651.hemal0651.github.io)
+![](https://komarev.com/ghpvc/?username=Hemal0651&style=flat-square&color=ff6b00)
+
 ![Portfolio Preview](public/screenshot.jpg)
 
 </div>
