@@ -1,20 +1,47 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Hemal Farouqe — Portfolio
 
-# Run and deploy your AI Studio app
+> Designing Systems That Scale, Engineered for Precision.
 
-This contains everything you need to run your app locally.
+![Portfolio Preview](assets/screenshot.png)
 
-View your app in AI Studio: https://ai.studio/apps/8a12d73e-ee59-4f79-8123-1a55c186fd9f
+🌐 **Live:** [hemal0651.me](https://hemal0651.me)
+
+---
+
+## Tech Stack
+
+- ⚛️ React 19 + TypeScript
+- ⚡ Vite
+- 🎨 Tailwind CSS
+- 🎞️ Framer Motion
+
+## Features
+
+- 🖥️ Interactive CLI emulator
+- 📊 Algorithm visualizer playground
+- 🗂️ Project showcase with filtering
+- 🪪 Developer identity card
+- 📅 Professional journey timeline
+- 📬 Contact form
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
+```bash
+npm install
+npm run dev
+```
 
+## Deploy
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+```bash
+npm run build
+npm run deploy
+```
+
+---
+
+## Contact
+
+- 📧 hemalfarouqe0651@gmail.com
+- 🐙 [github.com/Hemal0651](https://github.com/Hemal0651)
+- 💼 [linkedin.com/in/hemal-farouqe](https://linkedin.com/in/hemal-farouqe)
