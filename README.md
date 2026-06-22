@@ -6,7 +6,7 @@
 
 [![Live](https://img.shields.io/badge/Live-hemal0651.me-ff6b00?style=flat-square&logo=google-chrome&logoColor=white)](https://hemal0651.me)
 [![GitHub](https://img.shields.io/badge/GitHub-Hemal0651-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Hemal0651)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Hemal%20Farouqe-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/hemal-farouqe)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Hemal%20Farouqe-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](www.linkedin.com/in/hemal-farouqe-204301199)
 
 [![Email](https://img.shields.io/badge/Email-hemalfarouqe0651-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:hemalfarouqe0651@gmail.com)
 ![](https://komarev.com/ghpvc/?username=Hemal0651&style=flat-square&color=ff6b00)
